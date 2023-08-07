@@ -1,4 +1,5 @@
-# nCaus-pred
+<h1 align="center" nCaus-pred </p> 
+    
 A neuro-causal-driven approach for enhancing time-series prediction
 
 ### Causal models generation
