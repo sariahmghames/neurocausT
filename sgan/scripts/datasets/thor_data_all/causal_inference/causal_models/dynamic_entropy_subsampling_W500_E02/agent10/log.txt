@@ -1,0 +1,344 @@
+
+
+-------------------------------------------------------
+Selecting relevant features among: ['p', 'v', 'd_{obs}', '\\theta_{obs}']
+Selection method: Transfer Entropy
+Significance level: 0.05
+Max lag time: 1
+Min lag time: 1
+Data length: 2452
+
+##
+## Transfer Entropy analysis
+##
+
+## Target variable: p
+(p -1)               -->      (p)       |score: 3.668       |pval: 0.002        
+(\theta_{obs} -1)    -->      (p)       |score: 0.025       |pval: 0.002        
+(v -1)               -->      (p)       |score: 0.015       |pval: 0.002        
+(d_{obs} -1)         -->      (p)       |score: 0.007       |pval: 0.002        
+
+## Target variable: v
+(v -1)               -->      (v)       |score: 1.406       |pval: 0.002        
+
+## Target variable: d_{obs}
+(d_{obs} -1)         -->      (d_{obs}) |score: 3.230       |pval: 0.002        
+(\theta_{obs} -1)    -->      (d_{obs}) |score: 0.002       |pval: 0.002        
+
+## Target variable: \theta_{obs}
+(\theta_{obs} -1)    -->      (\theta_{obs})|score: 0.740       |pval: 0.002        
+
+
+-------------------------------------------------------
+Running Causal Discovery Algorithm
+
+##
+## Step 1: PC1 algorithm with lagged conditions
+##
+
+Parameters:
+selected_links = {0: [(0, -1), (3, -1), (1, -1), (2, -1)], 1: [(1, -1)], 2: [(2, -1), (3, -1)], 3: [(3, -1)]}
+independence test = gp_dc
+tau_min = 1
+tau_max = 1
+pc_alpha = [0.05]
+max_conds_dim = None
+max_combinations = 1
+
+
+
+## Variable $p$
+
+Iterating through pc_alpha = [0.05]:
+
+# pc_alpha = 0.05 (1/1):
+
+Testing condition sets of dimension 0:
+
+    Link ($p$ -1) --> $p$ (1/4):
+    Subset 0: () gives pval = 0.00000 / val =  0.999
+    No conditions of dimension 0 left.
+
+    Link ($\theta_{obs}$ -1) --> $p$ (2/4):
+    Subset 0: () gives pval = 0.00000 / val =  0.135
+    No conditions of dimension 0 left.
+
+    Link ($v$ -1) --> $p$ (3/4):
+    Subset 0: () gives pval = 0.00000 / val =  0.473
+    No conditions of dimension 0 left.
+
+    Link ($d_{obs}$ -1) --> $p$ (4/4):
+    Subset 0: () gives pval = 0.00000 / val =  0.216
+    No conditions of dimension 0 left.
+
+    Sorting parents in decreasing order with 
+    weight(i-tau->j) = min_{iterations} |val_{ij}(tau)| 
+
+Updating parents:
+
+    Variable $p$ has 4 link(s):
+        ($p$ -1): max_pval = 0.00000, min_val =  0.999
+        ($v$ -1): max_pval = 0.00000, min_val =  0.473
+        ($d_{obs}$ -1): max_pval = 0.00000, min_val =  0.216
+        ($\theta_{obs}$ -1): max_pval = 0.00000, min_val =  0.135
+
+Testing condition sets of dimension 1:
+
+    Link ($p$ -1) --> $p$ (1/4):
+    Subset 0: ($v$ -1)  gives pval = 0.00000 / val =  0.999
+    No conditions of dimension 1 left.
+
+    Link ($v$ -1) --> $p$ (2/4):
+    Subset 0: ($p$ -1)  gives pval = 0.00000 / val =  0.313
+    No conditions of dimension 1 left.
+
+    Link ($d_{obs}$ -1) --> $p$ (3/4):
+    Subset 0: ($p$ -1)  gives pval = 0.00000 / val =  0.132
+    No conditions of dimension 1 left.
+
+    Link ($\theta_{obs}$ -1) --> $p$ (4/4):
+    Subset 0: ($p$ -1)  gives pval = 0.00000 / val =  0.211
+    No conditions of dimension 1 left.
+
+    Sorting parents in decreasing order with 
+    weight(i-tau->j) = min_{iterations} |val_{ij}(tau)| 
+
+Updating parents:
+
+    Variable $p$ has 4 link(s):
+        ($p$ -1): max_pval = 0.00000, min_val =  0.999
+        ($v$ -1): max_pval = 0.00000, min_val =  0.313
+        ($\theta_{obs}$ -1): max_pval = 0.00000, min_val =  0.135
+        ($d_{obs}$ -1): max_pval = 0.00000, min_val =  0.132
+
+Testing condition sets of dimension 2:
+
+    Link ($p$ -1) --> $p$ (1/4):
+    Subset 0: ($v$ -1) ($\theta_{obs}$ -1)  gives pval = 0.00000 / val =  0.999
+    Still subsets of dimension 2 left, but q_max = 1 reached.
+
+    Link ($v$ -1) --> $p$ (2/4):
+    Subset 0: ($p$ -1) ($\theta_{obs}$ -1)  gives pval = 0.00000 / val =  0.215
+    Still subsets of dimension 2 left, but q_max = 1 reached.
+
+    Link ($\theta_{obs}$ -1) --> $p$ (3/4):
+    Subset 0: ($p$ -1) ($v$ -1)  gives pval = 0.00000 / val =  0.211
+    Still subsets of dimension 2 left, but q_max = 1 reached.
+
+    Link ($d_{obs}$ -1) --> $p$ (4/4):
+    Subset 0: ($p$ -1) ($v$ -1)  gives pval = 0.00000 / val =  0.112
+    Still subsets of dimension 2 left, but q_max = 1 reached.
+
+    Sorting parents in decreasing order with 
+    weight(i-tau->j) = min_{iterations} |val_{ij}(tau)| 
+
+Updating parents:
+
+    Variable $p$ has 4 link(s):
+        ($p$ -1): max_pval = 0.00000, min_val =  0.999
+        ($v$ -1): max_pval = 0.00000, min_val =  0.215
+        ($\theta_{obs}$ -1): max_pval = 0.00000, min_val =  0.135
+        ($d_{obs}$ -1): max_pval = 0.00000, min_val =  0.112
+
+Testing condition sets of dimension 3:
+
+    Link ($p$ -1) --> $p$ (1/4):
+    Subset 0: ($v$ -1) ($\theta_{obs}$ -1) ($d_{obs}$ -1)  gives pval = 0.00000 / val =  0.943
+    Still subsets of dimension 3 left, but q_max = 1 reached.
+
+    Link ($v$ -1) --> $p$ (2/4):
+    Subset 0: ($p$ -1) ($\theta_{obs}$ -1) ($d_{obs}$ -1)  gives pval = 0.00000 / val =  0.118
+    Still subsets of dimension 3 left, but q_max = 1 reached.
+
+    Link ($\theta_{obs}$ -1) --> $p$ (3/4):
+    Subset 0: ($p$ -1) ($v$ -1) ($d_{obs}$ -1)  gives pval = 0.00000 / val =  0.099
+    Still subsets of dimension 3 left, but q_max = 1 reached.
+
+    Link ($d_{obs}$ -1) --> $p$ (4/4):
+    Subset 0: ($p$ -1) ($v$ -1) ($\theta_{obs}$ -1)  gives pval = 0.00000 / val =  0.168
+    Still subsets of dimension 3 left, but q_max = 1 reached.
+
+    Sorting parents in decreasing order with 
+    weight(i-tau->j) = min_{iterations} |val_{ij}(tau)| 
+
+Updating parents:
+
+    Variable $p$ has 4 link(s):
+        ($p$ -1): max_pval = 0.00000, min_val =  0.943
+        ($v$ -1): max_pval = 0.00000, min_val =  0.118
+        ($d_{obs}$ -1): max_pval = 0.00000, min_val =  0.112
+        ($\theta_{obs}$ -1): max_pval = 0.00000, min_val =  0.099
+
+Algorithm converged for variable $p$
+
+## Variable $v$
+
+Iterating through pc_alpha = [0.05]:
+
+# pc_alpha = 0.05 (1/1):
+
+Testing condition sets of dimension 0:
+
+    Link ($v$ -1) --> $v$ (1/1):
+    Subset 0: () gives pval = 0.00000 / val =  0.962
+    No conditions of dimension 0 left.
+
+    Sorting parents in decreasing order with 
+    weight(i-tau->j) = min_{iterations} |val_{ij}(tau)| 
+
+Updating parents:
+
+    Variable $v$ has 1 link(s):
+        ($v$ -1): max_pval = 0.00000, min_val =  0.962
+
+Algorithm converged for variable $v$
+
+## Variable $d_{obs}$
+
+Iterating through pc_alpha = [0.05]:
+
+# pc_alpha = 0.05 (1/1):
+
+Testing condition sets of dimension 0:
+
+    Link ($d_{obs}$ -1) --> $d_{obs}$ (1/2):
+    Subset 0: () gives pval = 0.00000 / val =  0.998
+    No conditions of dimension 0 left.
+
+    Link ($\theta_{obs}$ -1) --> $d_{obs}$ (2/2):
+    Subset 0: () gives pval = 0.00000 / val =  0.093
+    No conditions of dimension 0 left.
+
+    Sorting parents in decreasing order with 
+    weight(i-tau->j) = min_{iterations} |val_{ij}(tau)| 
+
+Updating parents:
+
+    Variable $d_{obs}$ has 2 link(s):
+        ($d_{obs}$ -1): max_pval = 0.00000, min_val =  0.998
+        ($\theta_{obs}$ -1): max_pval = 0.00000, min_val =  0.093
+
+Testing condition sets of dimension 1:
+
+    Link ($d_{obs}$ -1) --> $d_{obs}$ (1/2):
+    Subset 0: ($\theta_{obs}$ -1)  gives pval = 0.00000 / val =  0.998
+    No conditions of dimension 1 left.
+
+    Link ($\theta_{obs}$ -1) --> $d_{obs}$ (2/2):
+    Subset 0: ($d_{obs}$ -1)  gives pval = 0.00000 / val =  0.124
+    No conditions of dimension 1 left.
+
+    Sorting parents in decreasing order with 
+    weight(i-tau->j) = min_{iterations} |val_{ij}(tau)| 
+
+Updating parents:
+
+    Variable $d_{obs}$ has 2 link(s):
+        ($d_{obs}$ -1): max_pval = 0.00000, min_val =  0.998
+        ($\theta_{obs}$ -1): max_pval = 0.00000, min_val =  0.093
+
+Algorithm converged for variable $d_{obs}$
+
+## Variable $\theta_{obs}$
+
+Iterating through pc_alpha = [0.05]:
+
+# pc_alpha = 0.05 (1/1):
+
+Testing condition sets of dimension 0:
+
+    Link ($\theta_{obs}$ -1) --> $\theta_{obs}$ (1/1):
+    Subset 0: () gives pval = 0.00000 / val =  0.881
+    No conditions of dimension 0 left.
+
+    Sorting parents in decreasing order with 
+    weight(i-tau->j) = min_{iterations} |val_{ij}(tau)| 
+
+Updating parents:
+
+    Variable $\theta_{obs}$ has 1 link(s):
+        ($\theta_{obs}$ -1): max_pval = 0.00000, min_val =  0.881
+
+Algorithm converged for variable $\theta_{obs}$
+
+## Resulting lagged parent (super)sets:
+
+    Variable $p$ has 4 link(s):
+        ($p$ -1): max_pval = 0.00000, min_val =  0.999
+        ($v$ -1): max_pval = 0.00000, min_val =  0.473
+        ($d_{obs}$ -1): max_pval = 0.00000, min_val =  0.216
+        ($\theta_{obs}$ -1): max_pval = 0.00000, min_val =  0.135
+
+    Variable $v$ has 1 link(s):
+        ($v$ -1): max_pval = 0.00000, min_val =  0.962
+
+    Variable $d_{obs}$ has 2 link(s):
+        ($d_{obs}$ -1): max_pval = 0.00000, min_val =  0.998
+        ($\theta_{obs}$ -1): max_pval = 0.00000, min_val =  0.093
+
+    Variable $\theta_{obs}$ has 1 link(s):
+        ($\theta_{obs}$ -1): max_pval = 0.00000, min_val =  0.881
+
+##
+## Step 2: MCI algorithm
+##
+
+Parameters:
+
+independence test = gp_dc
+tau_min = 1
+tau_max = 1
+max_conds_py = None
+max_conds_px = None
+
+        link ($p$ -1) --> $p$ (1/4):
+        with conds_y = [ ($v$ -1) ($d_{obs}$ -1) ($\theta_{obs}$ -1) ]
+        with conds_x = [ ($p$ -2) ($v$ -2) ($d_{obs}$ -2) ($\theta_{obs}$ -2) ]
+
+        link ($\theta_{obs}$ -1) --> $p$ (2/4):
+        with conds_y = [ ($p$ -1) ($v$ -1) ($d_{obs}$ -1) ]
+        with conds_x = [ ($\theta_{obs}$ -2) ]
+
+        link ($v$ -1) --> $p$ (3/4):
+        with conds_y = [ ($p$ -1) ($d_{obs}$ -1) ($\theta_{obs}$ -1) ]
+        with conds_x = [ ($v$ -2) ]
+
+        link ($d_{obs}$ -1) --> $p$ (4/4):
+        with conds_y = [ ($p$ -1) ($v$ -1) ($\theta_{obs}$ -1) ]
+        with conds_x = [ ($d_{obs}$ -2) ($\theta_{obs}$ -2) ]
+
+        link ($v$ -1) --> $v$ (1/1):
+        with conds_y = [ ]
+        with conds_x = [ ($v$ -2) ]
+
+        link ($d_{obs}$ -1) --> $d_{obs}$ (1/2):
+        with conds_y = [ ($\theta_{obs}$ -1) ]
+        with conds_x = [ ($d_{obs}$ -2) ($\theta_{obs}$ -2) ]
+
+        link ($\theta_{obs}$ -1) --> $d_{obs}$ (2/2):
+        with conds_y = [ ($d_{obs}$ -1) ]
+        with conds_x = [ ($\theta_{obs}$ -2) ]
+
+        link ($\theta_{obs}$ -1) --> $\theta_{obs}$ (1/1):
+        with conds_y = [ ]
+        with conds_x = [ ($\theta_{obs}$ -2) ]
+
+## Significant links at alpha = 0.05:
+
+    Variable $p$ has 4 link(s):
+        ($p$ -1): pval = 0.00000 | val =  0.855
+        ($v$ -1): pval = 0.00000 | val =  0.111
+        ($d_{obs}$ -1): pval = 0.00000 | val =  0.109
+        ($\theta_{obs}$ -1): pval = 0.00600 | val =  0.058
+
+    Variable $v$ has 1 link(s):
+        ($v$ -1): pval = 0.00000 | val =  0.569
+
+    Variable $d_{obs}$ has 2 link(s):
+        ($d_{obs}$ -1): pval = 0.00000 | val =  0.986
+        ($\theta_{obs}$ -1): pval = 0.00200 | val =  0.063
+
+    Variable $\theta_{obs}$ has 1 link(s):
+        ($\theta_{obs}$ -1): pval = 0.00000 | val =  0.710
+
+Feature selected: ['p', 'v', 'd_{obs}', '\\theta_{obs}']

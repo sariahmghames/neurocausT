@@ -1,0 +1,6 @@
+The effective training script for neurocausal approach for human motion prediction is train_causal_opt.py
+
+Then:
+models_causal_opt.py
+trajectories_causal_opt.py
+loader_causal.py
