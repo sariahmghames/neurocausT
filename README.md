@@ -1,4 +1,4 @@
-<h1 style="text-align:center" > nCaus-pred </h1> 
+<p align="center" > nCaus-pred </p> 
     
 A neuro-causal-driven approach for enhancing time-series prediction
 
