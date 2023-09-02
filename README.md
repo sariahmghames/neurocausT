@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/sariahmghames/nCaus-pred/blob/main/images/Logo.jpg" width="200" height="250" /> 
+    <img src="https://github.com/sariahmghames/nCaus-pred/blob/main/images/Logo.jpg" width="95" height="96" /> 
 </p> 
 
 <h1 align="center" > nCaus-pred </h1> 
