@@ -1,5 +1,5 @@
 <div class="header">
-  <img src="https://github.com/sariahmghames/nCaus-pred/blob/main/images/Logo.jpg" alt="logo" width="229" height="225"  />
+  <img align="center" src="https://github.com/sariahmghames/nCaus-pred/blob/main/images/Logo.jpg" alt="logo" width="129" height="125"  />
   <h1 align="center" > nCaus-pred </h1> 
 </div>
 
