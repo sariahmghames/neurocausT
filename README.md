@@ -1,7 +1,7 @@
-<div class="header">
-  <img align="center" src="https://github.com/sariahmghames/nCaus-pred/blob/main/images/Logo.jpg" alt="logo" width="79" height="75"  />
-  <h1 align="center" > nCaus-pred </h1> 
-</div>
+
+<img src="https://github.com/sariahmghames/nCaus-pred/blob/main/images/Logo.jpg" alt="logo" width="79" height="75"  />
+<span align="center" > nCaus-pred </span> 
+
 
 
     
