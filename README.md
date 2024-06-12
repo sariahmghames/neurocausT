@@ -7,4 +7,6 @@ A neuro-causal-driven approach for enhancing time-series prediction
 
 We used the causal library developed by our team member Luca Castri @ https://pypi.org/project/fpcmci/
 
+```
 pip install fpcmci
+```
